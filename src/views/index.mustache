@@ -4,8 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
     <h1>{{ title }}</h1>
+    <a href="/add">add items</a>
+    <div class="container-md">
+      <!--  -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">product Name</th>
+            <th scope="col">price</th>
+            <th scope="col">Handle</th>
+            <th scope="col">stockQuantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#data}}
+          <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{ productName }}</td>
+            <td>{{ price }}</td>
+            <td>{{ stockQuantity }}</td>
+            <td>{{ description }}</td>
+          </tr>
+          {{/data}}
+        </tbody>
+      </table>
+      <!--  -->
+    </div>
   </body>
 </html>

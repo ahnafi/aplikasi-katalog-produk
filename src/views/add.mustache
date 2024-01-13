@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-md">
+      {{#info}}
+      <div class="alert alert-success" role="alert">
+        {{ info
+        }}<button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {{/info}}
+      <!--  -->
+      <a href="/">kembali</a>
+      <!--  -->
+      <form method="post" action="/add">
+        <div class="mb-3">
+          <label for="productName" class="form-label">product name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            name="productName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">price</label>
+          <input type="number" class="form-control" id="price" name="price" />
+        </div>
+        <div class="mb-3">
+          <label for="stockQuantity" class="form-label">stock quantity</label>
+          <input
+            type="text"
+            class="form-control"
+            id="stockQuantity"
+            name="stockQuantity"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            name="description"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
